@@ -69,9 +69,17 @@ Describe your approach here...
 ```
 Write your pseudocode here...
 ```
-
+FUNCTION isPowerOfFour(n):
+    IF n == 1:
+        RETURN True
+    
+    IF n <= 0 OR n % 4 != 0:
+        RETURN False
+        
+    RETURN isPowerOfFour(n // 4)
 ### Time Complexity
 - 
-
+O(log n)
 ### Space Complexity
 - 
+O(log n)

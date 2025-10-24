@@ -43,11 +43,23 @@ Describe your approach here...
 
 ### Pseudocode
 ```
-Write your pseudocode here...
+FUNCTION solve(n):
+    // Base case
+    IF n < 10:
+        RETURN n
+    
+    // Recursive step
+    current_sum = 0
+    WHILE n > 0:
+        current_sum = current_sum + (n % 10)
+        n = n // 10
+    
+    RETURN solve(current_sum)
 ```
 
 ### Time Complexity
 - 
-
+O(\log n)
 ### Space Complexity
 - 
+O(1)
