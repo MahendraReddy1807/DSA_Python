@@ -1,14 +1,17 @@
-# Sum of Array Elements
-# Topic: Space Complexity
-# Type: In-Session
-
 class Solution:
     def sumArray(self, arr: list[int]) -> int:
-        pass
+        total_sum = 0
+        for num in arr:
+            total_sum += num
+        return total_sum
 
-# Demo
 if __name__ == '__main__':
     sol = Solution()
-    print(sol.sumArray([1,2,3]))          # Output: 6
-    print(sol.sumArray([-5,10,-3]))       # Output: 2
-
+    
+    input_arr = [1, 2, 3]
+    print(f"Input: {input_arr}")
+    print(f"Output: {sol.sumArray(input_arr)}")
+    
+    input_arr_2 = [10, -5, 2]
+    print(f"\nInput: {input_arr_2}")
+    print(f"Output: {sol.sumArray(input_arr_2)}")

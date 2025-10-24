@@ -1,15 +1,18 @@
-# Cubic Time (O(n³))
-# Topic: Time & Space Complexity
-# Type: Home Challenge
-
 class Solution:
-    def allTriplets(self, arr: list[int]) -> list[tuple[int,int,int]]:
-        pass
+    def printAllTriplets(self, arr: list[int]) -> None:
+        for i in arr:
+            for j in arr:
+                for k in arr:
+                    print(f"({i},{j},{k})")
 
-# Demo
 if __name__ == '__main__':
     sol = Solution()
-    print(sol.allTriplets([1,2,3]))  # 27 triplets
-    print(sol.allTriplets([4,5]))    # 8 triplets
-    print(sol.allTriplets([9]))      # 1 triplet
-
+    
+    print("Input: [1,2,3]")
+    sol.printAllTriplets([1, 2, 3])
+    
+    print("\nInput: [4,5]")
+    sol.printAllTriplets([4, 5])
+    
+    print("\nInput: [9]")
+    sol.printAllTriplets([9])

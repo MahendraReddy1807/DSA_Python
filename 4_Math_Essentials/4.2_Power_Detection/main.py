@@ -1,15 +1,23 @@
-# Power Detection
-# Topic: Math Essentials
-# Type: In-Session
-
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
-        # Check if n is a power of two using bit manipulation
-        pass
+        if n <= 0:
+            return False
+        return (n & (n - 1)) == 0
 
-# Demo
 if __name__ == '__main__':
     sol = Solution()
-    print(sol.isPowerOfTwo(1))   # Output: True
-    print(sol.isPowerOfTwo(16))  # Output: True
-    print(sol.isPowerOfTwo(3))   # Output: False
+    
+    print(f"Input: 1")
+    print(f"Output: {sol.isPowerOfTwo(1)}")
+    
+    print(f"\nInput: 16")
+    print(f"Output: {sol.isPowerOfTwo(16)}")
+    
+    print(f"\nInput: 3")
+    print(f"Output: {sol.isPowerOfTwo(3)}")
+
+    print(f"\nInput: 0")
+    print(f"Output: {sol.isPowerOfTwo(0)}")
+
+    print(f"\nInput: -16")
+    print(f"Output: {sol.isPowerOfTwo(-16)}")

@@ -1,16 +1,14 @@
-# Logarithmic Time (O(logn))
-# Topic: Time & Space Complexity
-# Type: In-Session
-
 class Solution:
     def divideUntilOne(self, n: int) -> int:
-        pass
+        count = 0
+        while n > 1:
+            n //= 2
+            count += 1
+        return count
 
-# Demo
 if __name__ == '__main__':
     sol = Solution()
-    print(sol.divideUntilOne(16))  # Output: 4
-    print(sol.divideUntilOne(8))   # Output: 3
-    print(sol.divideUntilOne(1))   # Output: 0
-    print(sol.divideUntilOne(100)) # Output: 6
-
+    print(sol.divideUntilOne(16))
+    print(sol.divideUntilOne(8))
+    print(sol.divideUntilOne(1))
+    print(sol.divideUntilOne(100))

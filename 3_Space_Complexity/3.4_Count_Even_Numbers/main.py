@@ -1,14 +1,22 @@
-# Count Even Numbers
-# Topic: Space Complexity
-# Type: Home Challenge
-
 class Solution:
     def countEven(self, arr: list[int]) -> int:
-        # Count even numbers
-        pass
+        count = 0
+        for num in arr:
+            if num % 2 == 0:
+                count += 1
+        return count
 
-# Demo
 if __name__ == '__main__':
     sol = Solution()
-    print(sol.countEven([2,5,6,7,8]))     # Output: 3
-    print(sol.countEven([1,3,5]))         # Output: 0
+    
+    input_arr = [2, 5, 6, 7, 8]
+    print(f"Input: {input_arr}")
+    print(f"Output: {sol.countEven(input_arr)}")
+    
+    input_arr_2 = [1, 3, 5, 7]
+    print(f"\nInput: {input_arr_2}")
+    print(f"Output: {sol.countEven(input_arr_2)}")
+    
+    input_arr_3 = [0, -2, -4]
+    print(f"\nInput: {input_arr_3}")
+    print(f"Output: {sol.countEven(input_arr_3)}")

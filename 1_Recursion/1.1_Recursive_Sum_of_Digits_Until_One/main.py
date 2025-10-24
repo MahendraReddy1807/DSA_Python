@@ -1,13 +1,16 @@
-# Recursive Sum of Digits Until One
-# Topic: Recursion
-# Type: In-Session
-class Solution:  
-    def recursiveDigitSum(self, n: int) -> int:  
-        # Implement using recursion  
-        return 0 
-# Demo   
+class Solution:
+    def isPowerOfFour(self, n: int) -> bool:
+        if n <= 0:
+            return False
+        
+        while n % 4 == 0:
+            n //= 4
+            
+        return n == 1
+
 if __name__ == '__main__':
-    sol = Solution() 
-    print(sol.recursiveDigitSum(9875))   
-    print(sol.recursiveDigitSum(1234))   
-    print(sol.recursiveDigitSum(5)) 
+    sol = Solution()
+    print(sol.isPowerOfFour(16))
+    print(sol.isPowerOfFour(5))
+    print(sol.isPowerOfFour(1))
+    print(sol.isPowerOfFour(-1))

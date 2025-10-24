@@ -1,13 +1,17 @@
-# Binary String Addition
-# Topic: Math Essentials
-# Type: In-Session
-
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
-        pass
+        num1 = int(a, 2)
+        num2 = int(b, 2)
+        result_sum = num1 + num2
+        return bin(result_sum)[2:]
 
-# Demo
 if __name__ == '__main__':
     sol = Solution()
-    print(sol.addBinary("11", "1"))      # Output: "100"
-    print(sol.addBinary("1010", "1011")) # Output: "10101"
+    
+    a1, b1 = "11", "1"
+    print(f"Input: a = \"{a1}\", b = \"{b1}\"")
+    print(f"Output: \"{sol.addBinary(a1, b1)}\"")
+    
+    a2, b2 = "1010", "1011"
+    print(f"\nInput: a = \"{a2}\", b = \"{b2}\"")
+    print(f"Output: \"{sol.addBinary(a2, b2)}\"")

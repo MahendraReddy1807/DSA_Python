@@ -1,15 +1,31 @@
-# Fibonacci Number (Iterative)
-# Topic: Space Complexity
-# Type: Home Challenge
-
 class Solution:
     def fibonacci(self, n: int) -> int:
-        # Iterative approach to save space
-        pass
+        if n == 0:
+            return 0
+        if n == 1:
+            return 1
+            
+        a, b = 0, 1
+        for _ in range(n - 1):
+            a, b = b, a + b
+            
+        return b
 
-# Demo
 if __name__ == '__main__':
     sol = Solution()
-    print(sol.fibonacci(6))               # Output: 8
-    print(sol.fibonacci(0))               # Output: 0
-
+    
+    input_num = 6
+    print(f"Input: {input_num}")
+    print(f"Output: {sol.fibonacci(input_num)}")
+    
+    input_num_2 = 0
+    print(f"\nInput: {input_num_2}")
+    print(f"Output: {sol.fibonacci(input_num_2)}")
+    
+    input_num_3 = 1
+    print(f"\nInput: {input_num_3}")
+    print(f"Output: {sol.fibonacci(input_num_3)}")
+    
+    input_num_4 = 2
+    print(f"\nInput: {input_num_4}")
+    print(f"Output: {sol.fibonacci(input_num_4)}")
